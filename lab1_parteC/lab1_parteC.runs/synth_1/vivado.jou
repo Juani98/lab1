@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon May  2 22:15:24 2022
+# Process ID: 12584
+# Current directory: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteC/lab1_parteC.runs/synth_1
+# Command line: vivado.exe -log rst_async_ass_synch_deass.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rst_async_ass_synch_deass.tcl
+# Log file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteC/lab1_parteC.runs/synth_1/rst_async_ass_synch_deass.vds
+# Journal file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteC/lab1_parteC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source rst_async_ass_synch_deass.tcl -notrace
