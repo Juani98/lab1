@@ -28,12 +28,14 @@ begin
     begin
         if (rst='1') then --reset activo en alto
             counter <= (others => '0');
+            carry_out <= '0';
         elsif (enable='1') then
             counter <= counter;
         
         elsif(rising_edge(clk)) then
             if(load_data='1') then --load data activo en alto
                 counter <= unsigned(data_in);
+                
             else
                 if (up_down='1') then --cuenta ascendente en 1, descendente en 0
                     counter <= counter + 1;

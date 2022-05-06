@@ -33,7 +33,7 @@ set_property ip_output_repo c:/xilinx_proyectos/Laboratorios/lab1/lab1_parteB/la
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/FF_D.vhd
-  C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/contador_24bits.vhd
+  C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/imports/new/counter_Nbits.vhd
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/debouncer.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being

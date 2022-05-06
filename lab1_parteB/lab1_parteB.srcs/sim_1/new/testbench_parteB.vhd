@@ -3,6 +3,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity testbench_parteB is
+
 --  Port ( );
 end testbench_parteB;
 
@@ -16,7 +17,7 @@ architecture Behavioral of testbench_parteB is
            );
     end component;
     --asignacion de señales    
-    signal tb_reset : std_logic :='0';
+    signal tb_reset : std_logic :='1';
     signal tb_clock : std_logic :='0';
     signal tb_debounce_input : std_logic :='0';
     signal tb_debounce_output : std_logic;
@@ -36,12 +37,45 @@ architecture Behavioral of testbench_parteB is
     
     process   
     begin
-
+        wait for 200 ns;
         tb_reset <= '0'; 
-        wait for 20 ns;
+        wait for 10 us;
+        tb_reset <= '1'; 
+        wait for 3 us;
+        tb_debounce_input <= '1'; 
+        wait for 2 us;
+        tb_debounce_input <= '0'; 
+        wait for 6 us;
+        tb_debounce_input <= '1'; 
+        wait for 3 us;
+        tb_debounce_input <= '0';
+        wait for 500 ns;
         tb_debounce_input <= '1';
-
+        wait for 7 us;
+        tb_debounce_input <= '0';
+        wait for 5 us;
+        tb_debounce_input <= '1';
         
-        wait;
+        wait for 150ms;
+        tb_debounce_input <= '0'; 
+        wait for 50ms;
+        
+        
+        
+        
+        tb_debounce_input <= '1'; 
+        wait for 2 us;
+        tb_debounce_input <= '0'; 
+        wait for 6 us;
+        tb_debounce_input <= '1'; 
+        wait for 4 us;
+        tb_debounce_input <= '0';
+        wait for 2 ns;
+        tb_debounce_input <= '1';
+        wait for 4 us;
+        tb_debounce_input <= '0';
+        wait for 5 us;
+        tb_debounce_input <= '1';
+        wait for 150ms;
     end process;
 end Behavioral;

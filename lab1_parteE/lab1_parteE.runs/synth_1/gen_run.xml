@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1651705076">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1651789302">
   <File Type="PA-TCL" Name="divisor_frecuencia.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="divisor_frecuencia_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="divisor_frecuencia_reports.tcl"/>
   <File Type="RDS-RDS" Name="divisor_frecuencia.vds"/>
   <File Type="RDS-UTIL" Name="divisor_frecuencia_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="divisor_frecuencia_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="divisor_frecuencia.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="divisor_frecuencia_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="divisor_frecuencia_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/contador_24bits.vhd">
@@ -37,7 +34,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="divisor_frecuencia"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

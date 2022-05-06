@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed May  4 19:57:59 2022
-# Process ID: 13536
+# Start of session at: Thu May  5 19:21:44 2022
+# Process ID: 5316
 # Current directory: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.runs/synth_1
 # Command line: vivado.exe -log divisor_frecuencia.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source divisor_frecuencia.tcl
 # Log file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.runs/synth_1/divisor_frecuencia.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8156 
+INFO: Helper process launched with PID 7616 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 455.473 ; gain = 166.367
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 455.055 ; gain = 160.133
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'divisor_frecuencia' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/new/divisor_frecuencia.vhd:17]
 	Parameter cnt_width bound to: 23 - type: integer 
@@ -25,25 +25,25 @@ INFO: [Synth 8-3491] module 'contador_24bits' declared at 'C:/xilinx_proyectos/L
 INFO: [Synth 8-638] synthesizing module 'contador_24bits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/imports/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/contador_24bits.vhd:20]
 	Parameter cnt_width bound to: 23 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'contador_24bits' (1#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/imports/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/contador_24bits.vhd:20]
-WARNING: [Synth 8-6014] Unused sequential element internal_data_counter_in_reg was removed.  [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/new/divisor_frecuencia.vhd:64]
 INFO: [Synth 8-256] done synthesizing module 'divisor_frecuencia' (2#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/new/divisor_frecuencia.vhd:17]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 517.859 ; gain = 228.754
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 517.617 ; gain = 222.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 517.859 ; gain = 228.754
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 517.617 ; gain = 222.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 517.859 ; gain = 228.754
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 517.617 ; gain = 222.695
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/imports/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/contador_24bits.vhd:38]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/imports/lab1/lab1_parteB/lab1_parteB.srcs/sources_1/new/contador_24bits.vhd:40]
+INFO: [Synth 8-5544] ROM "internal_data_counter_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 517.859 ; gain = 228.754
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 517.617 ; gain = 222.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -59,8 +59,8 @@ Detailed RTL Component Info :
 +---Registers : 
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   3 Input     22 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -73,8 +73,8 @@ Detailed RTL Component Info :
 +---Registers : 
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   3 Input     22 Bit        Muxes := 1     
 Module contador_24bits 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -97,7 +97,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 683.109 ; gain = 388.188
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -110,7 +110,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -122,7 +122,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -146,7 +146,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -159,7 +159,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -171,25 +171,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -208,47 +208,46 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |     6|
 |3     |LUT1   |    24|
-|4     |LUT2   |    27|
+|4     |LUT2   |    10|
 |5     |LUT3   |     1|
-|6     |LUT4   |     6|
-|7     |LUT5   |     4|
-|8     |LUT6   |     9|
-|9     |FDCE   |    25|
+|6     |LUT4   |    13|
+|7     |LUT5   |     2|
+|8     |LUT6   |     5|
+|9     |FDCE   |    26|
 |10    |FDRE   |     1|
-|11    |FDSE   |     1|
-|12    |IBUF   |     5|
-|13    |OBUF   |     2|
+|11    |IBUF   |     5|
+|12    |OBUF   |     1|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------------+----------------+------+
 |      |Instance          |Module          |Cells |
 +------+------------------+----------------+------+
-|1     |top               |                |   112|
-|2     |  counter1_24bits |contador_24bits |   100|
+|1     |top               |                |    95|
+|2     |  counter1_24bits |contador_24bits |    85|
 +------+------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 683.363 ; gain = 394.258
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 686.418 ; gain = 391.496
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 803.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.930 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 803.355 ; gain = 514.250
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 803.355 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 805.930 ; gain = 511.008
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.930 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteE/lab1_parteE.runs/synth_1/divisor_frecuencia.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file divisor_frecuencia_utilization_synth.rpt -pb divisor_frecuencia_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May  4 19:58:18 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu May  5 19:22:01 2022...

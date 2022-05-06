@@ -3,6 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
 
 entity debounce_v2 is
+    generic(cnt_width: natural:= 22);
     Port ( 
         debounce_input : in STD_LOGIC;
         clock : in STD_LOGIC;
@@ -15,15 +16,15 @@ end debounce_v2;
 architecture Behavioral of debounce_v2 is
     --DISEÑO ESTRUCTURAL
     --componentes
-    component contador_24bits is
+    component counter_Nbits is
         Port ( 
             rst : in STD_LOGIC;
             enable : in std_logic;
-           data_in : in STD_LOGIC_VECTOR (23 downto 0);
+           data_in : in STD_LOGIC_VECTOR (cnt_width-1 downto 0);
            clk : in STD_LOGIC;
            up_down : in STD_LOGIC;
            load_data : in STD_LOGIC;
-           data_out : out STD_LOGIC_VECTOR (23 downto 0);
+           data_out : out STD_LOGIC_VECTOR (cnt_width-1 downto 0);
            carry_out : out std_logic
            
            );
@@ -38,8 +39,8 @@ architecture Behavioral of debounce_v2 is
     end component;
 
 --señales internas (contador)
-signal internal_data_counter_in : STD_LOGIC_VECTOR (23 downto 0);
-signal internal_data_counter_out : STD_LOGIC_VECTOR (23 downto 0);
+signal internal_data_counter_in : STD_LOGIC_VECTOR (cnt_width-1 downto 0);
+signal internal_data_counter_out : STD_LOGIC_VECTOR (cnt_width-1 downto 0);
 signal internal_counter_carry_out : std_logic;
 signal internal_counter_enable : std_logic;
 signal internal_pre_load_data :  STD_LOGIC;
@@ -51,10 +52,10 @@ signal internal_q1, internal_q2 : std_logic;
 begin
     --Componentes
     --Componente N1: contador de 24bits
-     counter1_24bits: contador_24bits port map(
+     counter1_24bits: counter_Nbits port map(
         rst => internal_start_counter,
         enable => internal_counter_carry_out,
-        data_in => "000000000000000000000000",
+        data_in => (others=>'0'),
         clk => clock,
         up_down => '1',
         load_data => '0', 
@@ -89,9 +90,14 @@ begin
    
    
    
---    process (clock, debounce_input,reset,internal_start_counter)
+--    process (debounce_input)
 --    begin
-    
-
+----        if(reset='0') then
+----            internal_start_counter <='1';
+----            debounce_output <='0';
+----        end if;
+--        if(falling_edge(debounce_input)) then
+--            debounce_output <='0';
+--        end if;
 --    end process;
 end Behavioral;
