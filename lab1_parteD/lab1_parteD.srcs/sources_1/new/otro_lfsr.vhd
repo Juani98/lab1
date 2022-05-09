@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 -------------------------------------------------------------------
  -- Enitiy --
 -------------------------------------------------------------------
-entity LFSR_Nbits is
+entity otro_lfsr is
      generic(
         lfsr_width : natural := 32 --ancho máximo
         );
@@ -19,11 +19,11 @@ entity LFSR_Nbits is
         q_lfsr_32b: out std_logic_vector(lfsr_width-1 downto 0)
         
         );
-end LFSR_Nbits;
+end otro_lfsr;
 -----------------------------------------------------------------------------------
  -- Architecture --
 -----------------------------------------------------------------------------------
-architecture beh of LFSR_Nbits is
+architecture beh of otro_lfsr is
 -- constant declarations
 constant max_width : natural := 32; -- max # of registers in the LFSR
 constant initial_value: std_logic_vector(lfsr_width-1 downto 0) := (0=>'1', others =>'0');

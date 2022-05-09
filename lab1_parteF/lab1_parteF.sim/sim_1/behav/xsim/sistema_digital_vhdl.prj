@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/new/counter_28bits.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/new/divisor_frecuencia.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteA/lab1_parteA.srcs/sources_1/imports/new/synchronizer.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/new/sistema_digital.vhd" \
+
+# Do not sort compile order
+nosort

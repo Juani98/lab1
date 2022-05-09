@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lab1_parteD.srcs/sources_1/new/LFSR_Nbits.vhd" \
+"../../../../lab1_parteD.srcs/sources_1/new/testbench_parteD.vhd" \
+
+# Do not sort compile order
+nosort
