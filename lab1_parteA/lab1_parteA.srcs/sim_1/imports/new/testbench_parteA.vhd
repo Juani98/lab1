@@ -15,11 +15,11 @@ architecture Behavioral of testbench_parteA is
            sync_output : out STD_LOGIC);
     end component;
     --asignacion de señales
-    signal tb_reset : std_logic :='0';
+    signal tb_reset : std_logic :='1';
     signal tb_clock : std_logic :='0';
     signal tb_async_input : std_logic :='0';
     signal tb_sync_output : std_logic;
-    constant clk_period: time :=  50 us; 
+    constant clk_period: time :=  15 ns; 
     
     begin
     --instanciacion de componentes
@@ -37,13 +37,14 @@ architecture Behavioral of testbench_parteA is
         --generacion de señale
         --reset
        -- tb_reset <= '0'; wait for 10 us;
-        wait for 10 us;
-        tb_reset <= '1'; wait for 10 us;
-
+        wait for 20 ns;
+        tb_reset <= '0';
         --dato en D
-        wait for 29 us;
-        tb_async_input <= '1'; wait for 51 us;
-        tb_async_input <= '0';
+        wait for 40 ns;
+        tb_reset <= '1';
+        wait for 44.5 ns; --aqui la entrada está muy próxima al cambio de clk    
+        tb_async_input <= '1';
 
+        wait;
     end process;
 end Behavioral;

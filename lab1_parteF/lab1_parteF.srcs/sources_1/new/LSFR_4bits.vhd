@@ -23,7 +23,7 @@ architecture beh of LFSR_4bits is
 signal q_lfsr_4b_i: std_logic_vector(lfsr_width-1 downto 0);
 begin
 -- Shifter Process
-    lfsr_cnt_proc: process(rst, clk, enable)
+    lfsr_cnt_proc: process(rst, clk, enable,q_lfsr_4b_i)
     begin
         if(rst='1') then
             q_lfsr_4b_i <= initial_value;

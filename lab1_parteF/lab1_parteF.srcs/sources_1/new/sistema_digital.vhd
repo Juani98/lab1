@@ -6,12 +6,10 @@ entity sistema_digital is
     generic(
         cnt_width: natural:= 4;
         initial_value: std_logic_vector(3 downto 0):= (0=>'1',others=>'0')
-       -- lfsr_width : integer := 4
     );
     Port ( 
         clock : in STD_LOGIC;
         reset : in std_logic;
-     --   enable: in std_logic;
         counter_select : in std_logic_vector(1 downto 0);
         counter_output : out std_logic_vector(cnt_width-1 downto 0)
     );
@@ -63,8 +61,8 @@ architecture Behavioral of sistema_digital is
 
     component rst_async_ass_synch_deass is
     generic(
-        rst_width: integer:=2;
-        rst_active_value: std_logic:='0'
+        rst_width: integer:=2
+     --   rst_active_value: std_logic:='0'
     );
     port(
         sys_clk : in std_logic;
@@ -156,20 +154,20 @@ begin
   divisor_frecuencia1: divisor_frecuencia port map(
         input_clk => clock,
         reset => internal_reset,
-        frec_selec => "010",
+        frec_selec => "010", --010 -> 1Hz
         output_clk => internal_clock
     );   
     
  --OUTPUTS    
-    with counter_select select
+    with internal_counter_select select
         counter_output <=   internal_data_counter_out_bin when "00",
                             internal_data_counter_out_bin when "01",
                             internal_data_counter_out_BCD when "10",
                             internal_data_counter_out_LFSR when others;     
 
-    process(reset,internal_reset)
+    process(reset,internal_reset) 
     begin
-        if(internal_reset='1') then
+        if(internal_reset='1') then --reset sincronizado
             internal_reset_LFSR_counter <='1';
             internal_reset_bin_counter <='1';
             internal_reset_BCD_counter <='1';
@@ -180,11 +178,12 @@ begin
             internal_reset_BCD_counter <='0';
         end if;
     end process;
-    process(counter_select)
+    process(internal_counter_select)
     begin
-        case counter_select is
+        case internal_counter_select is
             when "00" =>
                --ENABLES
+   
                 internal_enable_LFSR_counter <= '1';
                 internal_enable_BCD_counter <= '1';
                 internal_enable_bin_counter <= '0';
@@ -192,9 +191,10 @@ begin
 --                internal_reset_LFSR_counter <='1';
 --                internal_reset_BCD_counter <='0';
 --                internal_reset_bin_counter <='1';
-                
                 internal_up_down <= '1';
              when "01" =>
+             
+
                --ENABLES
                 internal_enable_LFSR_counter <= '1';
                 internal_enable_BCD_counter <= '1';
@@ -208,12 +208,15 @@ begin
                 internal_enable_LFSR_counter <= '1';
                 internal_enable_bin_counter <= '1';
                 internal_enable_BCD_counter <= '0';
+                
+ 
                 --RESETS
 --                internal_reset_LFSR_counter <='1';
 --                internal_reset_BCD_counter <='0';
 --                internal_reset_bin_counter <= '1';
                 internal_up_down <= '1';
             when others =>
+
                 internal_enable_LFSR_counter <= '0';
                 internal_enable_BCD_counter <= '1';
                 internal_enable_bin_counter <= '1';    

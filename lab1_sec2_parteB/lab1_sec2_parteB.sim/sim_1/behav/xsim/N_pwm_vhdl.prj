@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lab1_sec2_parteB.srcs/sources_1/imports/new/counter_Nbits.vhd" \
+"../../../../lab1_sec2_parteB.srcs/sources_1/imports/new/pwm.vhd" \
+"../../../../lab1_sec2_parteB.srcs/sources_1/new/lab1_sec2_parteB.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun May 15 22:27:50 2022
+# Process ID: 14084
+# Current directory: C:/xilinx_proyectos/Laboratorios/lab1/lab1_sec2_parteA_with_debounce/lab1_sec2_parteA_with_debounce.runs/synth_1
+# Command line: vivado.exe -log sistema_pwm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sistema_pwm.tcl
+# Log file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_sec2_parteA_with_debounce/lab1_sec2_parteA_with_debounce.runs/synth_1/sistema_pwm.vds
+# Journal file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_sec2_parteA_with_debounce/lab1_sec2_parteA_with_debounce.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sistema_pwm.tcl -notrace

@@ -19,8 +19,6 @@ entity counter_Nbits is
 
 
 
-
-
 architecture Behavioral of counter_Nbits is
     constant full_count: std_logic_vector(cnt_width-1 downto 0) := (others =>'1');
     signal counter  : unsigned(cnt_width-1 downto 0);

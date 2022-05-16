@@ -13,14 +13,17 @@ use IEEE.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity contador_24bits is
-    Port ( rst : in STD_LOGIC;
+    Port ( 
+            rst : in STD_LOGIC;
            enable: in std_logic;
            data_in : in STD_LOGIC_VECTOR (23 downto 0);
            clk : in STD_LOGIC;
            up_down : in STD_LOGIC;
            load_data : in STD_LOGIC;
            data_out : out STD_LOGIC_VECTOR (23 downto 0);
-           carry_out : out std_logic);
+           carry_out : out std_logic
+           
+           );
 end contador_24bits;
 
 architecture Behavioral of contador_24bits is

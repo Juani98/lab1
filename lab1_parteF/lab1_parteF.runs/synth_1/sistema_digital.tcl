@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
@@ -38,7 +40,7 @@ read_vhdl -library xil_defaultlib {
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/counter_28bits.vhd
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd
-  C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/new/divisor_frecuencia.vhd
+  C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd
   C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd
 }
@@ -50,6 +52,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/constrs_1/imports/new/zedboard_master_XDC_RevC_D_v3.xdc
+set_property used_in_implementation false [get_files C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/constrs_1/imports/new/zedboard_master_XDC_RevC_D_v3.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

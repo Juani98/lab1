@@ -20,7 +20,7 @@ architecture Behavioral of testbench_parteC is
     signal tb_sys_clk : std_logic :='0';
     signal tb_rst_aa_sd : std_logic :='0';
 
-    constant clk_period: time :=  50 us; 
+    constant clk_period: time :=  15 ns; 
     
     begin
     --instanciacion de componentes
@@ -34,18 +34,14 @@ architecture Behavioral of testbench_parteC is
     
     process   
     begin
-
-        wait for 10 us;
-        tb_sys_rst <= '1'; wait for 200 us;
-        tb_sys_rst <= '0';wait for 200 us;
+        tb_sys_rst <= '1';wait for 100 ns;
+        tb_sys_rst <= '0'; wait for 200 ns;--reset
+        tb_sys_rst <= '1';wait for 200 ns;
         
-        tb_sys_rst <= '1'; wait for 300 us;
-        tb_sys_rst <= '0';wait for 300 us;
-         
+ 
+        tb_sys_rst <= '0';wait for 300 ns;
+        tb_sys_rst <= '1'; wait for 300 ns;
 
---        wait for 100 us;
---        tb_sys_rst <= '1'; wait for 20 us;
---        tb_sys_rst <= '0';
         
         wait;
 

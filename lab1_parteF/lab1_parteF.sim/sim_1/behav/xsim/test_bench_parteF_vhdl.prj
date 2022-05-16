@@ -6,7 +6,7 @@ vhdl xil_defaultlib  \
 "../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd" \
 "../../../../lab1_parteF.srcs/sources_1/new/counter_28bits.vhd" \
 "../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd" \
-"../../../../lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE/lab1_parteE.srcs/sources_1/new/divisor_frecuencia.vhd" \
+"../../../../lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd" \
 "../../../../lab1_parteF.srcs/sources_1/new/sistema_digital.vhd" \
 "../../../../lab1_parteF.srcs/sources_1/new/synchronizer.vhd" \
 "../../../../lab1_parteF.srcs/sim_1/new/test_bench_parteF.vhd" \

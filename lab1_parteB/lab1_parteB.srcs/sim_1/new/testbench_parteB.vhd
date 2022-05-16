@@ -55,27 +55,8 @@ architecture Behavioral of testbench_parteB is
         tb_debounce_input <= '0';
         wait for 5 us;
         tb_debounce_input <= '1';
+        wait;       
         
-        wait for 150ms;
-        tb_debounce_input <= '0'; 
-        wait for 50ms;
-        
-        
-        
-        
-        tb_debounce_input <= '1'; 
-        wait for 2 us;
-        tb_debounce_input <= '0'; 
-        wait for 6 us;
-        tb_debounce_input <= '1'; 
-        wait for 4 us;
-        tb_debounce_input <= '0';
-        wait for 2 ns;
-        tb_debounce_input <= '1';
-        wait for 4 us;
-        tb_debounce_input <= '0';
-        wait for 5 us;
-        tb_debounce_input <= '1';
-        wait for 150ms;
+
     end process;
 end Behavioral;

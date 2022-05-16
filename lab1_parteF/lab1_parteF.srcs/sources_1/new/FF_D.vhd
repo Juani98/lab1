@@ -44,7 +44,7 @@ architecture Behavioral of FF_D is
     process (clk,r)
     --variables de process
         begin
-        if (r='0') then
+        if (r='1') then
             q<='0';
         elsif (rising_edge(clk)) then
             q<=d;
