@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1652653422">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1652883915">
   <File Type="PA-TCL" Name="divisor_frecuencia.tcl"/>
   <File Type="REPORTS-TCL" Name="divisor_frecuencia_reports.tcl"/>
   <File Type="RDS-RDS" Name="divisor_frecuencia.vds"/>

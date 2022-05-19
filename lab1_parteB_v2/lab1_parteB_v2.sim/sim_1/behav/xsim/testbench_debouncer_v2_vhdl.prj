@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../lab1_parteB_v2.srcs/sources_1/new/testbench_debouncer_v2.vhd" \
-
-# Do not sort compile order
-nosort

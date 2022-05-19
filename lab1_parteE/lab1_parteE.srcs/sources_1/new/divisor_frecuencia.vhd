@@ -1,7 +1,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
-
+------------------------------------------------------------------
+ -- Enitiy --
+------------------------------------------------------------------
 entity divisor_frecuencia is
     generic(cnt_width: natural:= 28);
     Port ( 
@@ -9,12 +11,16 @@ entity divisor_frecuencia is
         reset : in std_logic;
         frec_selec : in std_logic_vector(2 downto 0);
         output_clk : out STD_LOGIC
---        fin_cuenta : out std_logic
         );
 end divisor_frecuencia;
-
+------------------------------------------------------------------
+ -- Architecture --
+------------------------------------------------------------------
 architecture Behavioral of divisor_frecuencia is
-
+--Componentes
+-- Contador de 28bits para 33,33Mhz 
+-- Nota: Para usar en la placa con clk de 100Mhz => configurar contador a 29bits 
+--       Para simular con clk de 33,33Mhz => configurar contador a 28bits 
 component counter_Nbits is
     Port ( 
         rst : in STD_LOGIC;
@@ -27,6 +33,7 @@ component counter_Nbits is
         carry_out : out std_logic
         );
 end component;
+--Sincronizador de señales asincrónicas
     component synchronizer is
         Port ( 
             reset : in STD_LOGIC;
@@ -35,12 +42,8 @@ end component;
             sync_output : out STD_LOGIC
         );
     end component;
-
+--Reset con act. asincrónica y desact. sincrónica
     component rst_async_ass_synch_deass is
---    generic(
---        rst_width: integer:=2;
---        rst_active_value: std_logic:='1'
---    );
     port(
         sys_clk : in std_logic;
         sys_rst : in std_logic;
@@ -60,9 +63,9 @@ signal internal_output : std_logic; --salida por LED0 (para cada señal de distin
 signal internal_reset : std_logic;-- reset con activacion asincronica y desactivacion sincronica
 signal internal_frec_selec : std_logic_vector(2 downto 0); -- seleccion de frecuencia sincronizada
 begin
-   -- fin_cuenta <= internal_counter_carry_out;
+
     --Componentes
-    --Componente N1: contador de 24bits
+    --Componente N1: contador de 28bits
      counter1: counter_Nbits port map(
         rst => internal_reset,
         enable => '0',
@@ -73,63 +76,69 @@ begin
         data_out => internal_data_counter_out,
         carry_out => internal_counter_carry_out
     );
-
+    --Componente N2: Reset con act. asincrónica y desact. sincrónica
     rst_async_ass_synch_deass1: rst_async_ass_synch_deass port map(
         sys_clk => input_clk,
         sys_rst => reset,
         rst_aa_sd => internal_reset --reset sincronico
     );  
-    
+    --Componente N2: Sincronizador 1
     synchronizer1: synchronizer port map(
         reset => internal_reset,
         clock => input_clk,
         async_input => frec_selec(0), --entrada asincronica
         sync_output => internal_frec_selec(0)
     );   
+    --Componente N2: Sincronizador 2
     synchronizer2: synchronizer port map(
         reset => internal_reset,
         clock => input_clk,
         async_input => frec_selec(1), --entrada asincronica
         sync_output => internal_frec_selec(1)
     );
+    --Componente N2: Sincronizador 3
     synchronizer3: synchronizer port map(
         reset => internal_reset,
         clock => input_clk,
         async_input => frec_selec(2), --entrada asincronica
         sync_output => internal_frec_selec(2)
     );
-
     with internal_frec_selec select
-
+-- Este fragmento de código se utilizó para cargar en la placa debido al clk de 100Mhz, y no de 33,3MHz
+-- Este código está pensado para un clk de 100Mhz
 --        internal_data_counter_in <= "00000100110001001011010000000" when "000",  --f=5Hz
 --                                    "00001011111010111100001000000" when "001",  --f=2Hz
 --                                    "00010111110101111000010000000" when "010",  --f=1Hz
 --                                    "00101111101011110000100000000" when "011",  --f=0.5Hz
 --                                    "11101110011010110010100000000" when others; --f=0.1Hz
 
+--Este fragmento de código se utilizó para la simulación. 
+-- Está pensado para un clk de 33,33MHz
 
         internal_data_counter_in <= "0000001100101101110011010101" when "000",  --f=5Hz
                                     "0000011111110010100000010101" when "001",  --f=2Hz
                                     "0000111111100101000000101010" when "010",  --f=1Hz
                                     "0001111111001010000001010101" when "011",  --f=0.5Hz
                                     "1001111011110010000110101010" when others; --f=0.1Hz
+    
     process (internal_reset,input_clk,internal_counter_carry_out)
     begin 
-    if(internal_reset='1') then
-       -- output_clk <= '0';
+    if(internal_reset='1') then --reset activo en alto
         internal_output <='0';
     elsif(rising_edge(input_clk)) then 
               if(internal_counter_carry_out='1') then --finalizó la cuenta
-                    internal_pre_load_data <='1';
-                    internal_output <= not(internal_output);
+                    internal_pre_load_data <='1'; --precargo nuevo dato
+                    internal_output <= not(internal_output); --invierto la salida
                 else
-                    internal_pre_load_data <='0';
+                    internal_pre_load_data <='0'; --si no hubo desborde, inhabilito la precarga
                 end if;
- 
         end if;
     end process;
     output_clk <= internal_output;
 end Behavioral;
+
+
+
 
 
 

@@ -98,9 +98,7 @@ begin
         tb_counter_select <= "11"; --selecciono LFSR
         wait for 5000 ms; --retardo de 5 segundos
         wait;
-
- 
-        
+       
     end process;
  end Behavioral;
 

@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../lab1_parteB_v2.srcs/sources_1/new/contador_24bits.vhd" \
-"../../../../lab1_parteB_v2.srcs/sim_1/new/testbench_contador24bits.vhd" \
-
-# Do not sort compile order
-nosort

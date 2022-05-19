@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1651540521">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1652882844">
   <File Type="PA-TCL" Name="rst_async_ass_synch_deass.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="rst_async_ass_synch_deass_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="rst_async_ass_synch_deass_reports.tcl"/>
   <File Type="RDS-RDS" Name="rst_async_ass_synch_deass.vds"/>
   <File Type="RDS-UTIL" Name="rst_async_ass_synch_deass_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="rst_async_ass_synch_deass_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="rst_async_ass_synch_deass.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="rst_async_ass_synch_deass_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="rst_async_ass_synch_deass_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/PowerOnReset.vhd">

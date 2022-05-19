@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun May 15 19:54:20 2022
-# Process ID: 8368
+# Start of session at: Wed May 18 12:08:42 2022
+# Process ID: 12312
 # Current directory: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.runs/synth_1
 # Command line: vivado.exe -log sistema_digital.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sistema_digital.tcl
 # Log file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.runs/synth_1/sistema_digital.vds

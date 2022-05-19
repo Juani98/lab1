@@ -8,7 +8,6 @@ entity LFSR_4bits is
         initial_value: std_logic_vector(3 downto 0):= "1000";
         lfsr_width : integer := 4
         );
-
     port(
         clk : in std_logic;
         rst : in std_logic;
@@ -25,17 +24,16 @@ begin
 -- Shifter Process
     lfsr_cnt_proc: process(rst, clk, enable,q_lfsr_4b_i)
     begin
-        if(rst='1') then
+        if(rst='1') then --reset activo en alto
             q_lfsr_4b_i <= initial_value;
         elsif (enable='1') then
             q_lfsr_4b_i <= q_lfsr_4b_i;
-        
         elsif (rising_edge(clk)) then
-        -- shift operation: b3->b2, b2->b1, b1->b0
+        -- Shift operation: b3->b2, b2->b1, b1->b0
             shifter_loop: for i in 3 downto 1 loop
                 q_lfsr_4b_i(i-1) <= q_lfsr_4b_i(i);
             end loop shifter_loop;
-         -- Serial Input to the b3 of the LFSR
+         -- Feedback
         q_lfsr_4b_i(3) <= q_lfsr_4b_i(1) xor q_lfsr_4b_i(0);
         end if;
     end process lfsr_cnt_proc;

@@ -1,15 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
-
 ------------------------------------------------------------------
  -- Enitiy --
 ------------------------------------------------------------------
 entity testbench_parteE is
 --  Port ( );
 end testbench_parteE;
-
-
 -------------------------------------------------------------------
  -- Architecture --
 -------------------------------------------------------------------
@@ -36,11 +33,9 @@ begin
         output_clk => tb_output_clk
     );
     --Clock 
-    tb_input_clk <= not(tb_input_clk) after clk_period; --Tclk=30nS -> Ton = Toff = 15nS - 50% duty
-    
+    tb_input_clk <= not(tb_input_clk) after clk_period; --Tclk=30nS -> Ton = Toff = 15nS - 50% duty  
     process
     begin
- 
  ------------------------------------Testbench 1-------------------------------------------------    
 --  Descripción: Este código se uso para realizar las gráficas del informe. 
 --               Esta simulacion, por 400mS, selecciona una señal de 5Hz.
@@ -50,7 +45,8 @@ begin
 --               tb_frec_selec = "001" -> f=2Hz   
 --               tb_frec_selec = "010" -> f=1Hz   
 --               tb_frec_selec = "011" -> f=0.5Hz   
---               tb_frec_selec = "100" (and others) -> f=0.1Hz                
+--               tb_frec_selec = "100" (and others) -> f=0.1Hz       
+--  Nota: Ejecutar la simulación 1500mS      
 -------------------------------------------------------------------------------------------------   
  
         --Testeo para frecuencia 5Hz
@@ -70,7 +66,6 @@ begin
         wait for 100 ns;
         tb_frec_selec <= "001";  --Selección de frecuencia de salida 2Hz
         wait for 1000 ms;
-        
         wait;
     
     end process;

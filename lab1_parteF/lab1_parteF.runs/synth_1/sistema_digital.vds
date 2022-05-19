@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun May 15 19:54:20 2022
-# Process ID: 8368
+# Start of session at: Wed May 18 12:08:42 2022
+# Process ID: 12312
 # Current directory: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.runs/synth_1
 # Command line: vivado.exe -log sistema_digital.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sistema_digital.tcl
 # Log file: C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.runs/synth_1/sistema_digital.vds
@@ -16,41 +16,41 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5616 
+INFO: Helper process launched with PID 2684 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 713.371 ; gain = 177.582
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 712.992 ; gain = 177.574
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'sistema_digital' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'sistema_digital' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:22]
 	Parameter cnt_width bound to: 4 - type: integer 
 	Parameter initial_value bound to: 4'b0001 
-INFO: [Synth 8-3491] module 'counter_Nbits' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd:6' bound to instance 'counter1_binario' of component 'counter_Nbits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:112]
+INFO: [Synth 8-3491] module 'counter_Nbits' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd:6' bound to instance 'counter1_binario' of component 'counter_Nbits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:113]
 INFO: [Synth 8-638] synthesizing module 'counter_Nbits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd:22]
 	Parameter cnt_width bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'counter_Nbits' (1#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd:22]
-INFO: [Synth 8-3491] module 'BCD_counter' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd:26' bound to instance 'counter2_BCD' of component 'BCD_counter' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:123]
-INFO: [Synth 8-638] synthesizing module 'BCD_counter' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd:37]
+INFO: [Synth 8-3491] module 'BCD_counter' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd:7' bound to instance 'counter2_BCD' of component 'BCD_counter' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'BCD_counter' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd:19]
 	Parameter cnt_width bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'BCD_counter' (2#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd:37]
-INFO: [Synth 8-3491] module 'LFSR_4bits' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd:6' bound to instance 'counter3_LFSR' of component 'LFSR_4bits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:130]
-INFO: [Synth 8-638] synthesizing module 'LFSR_4bits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'BCD_counter' (2#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteF_BCD/lab1_parteF_BCD.srcs/sources_1/new/BCD_counter.vhd:19]
+INFO: [Synth 8-3491] module 'LFSR_4bits' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd:6' bound to instance 'counter3_LFSR' of component 'LFSR_4bits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'LFSR_4bits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd:21]
 	Parameter initial_value bound to: 4'b1000 
 	Parameter lfsr_width bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'LFSR_4bits' (3#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd:22]
-INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:34' bound to instance 'synchronizer1' of component 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:137]
+INFO: [Synth 8-256] done synthesizing module 'LFSR_4bits' (3#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/LSFR_4bits.vhd:21]
+INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:34' bound to instance 'synchronizer1' of component 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:41]
 INFO: [Synth 8-3491] module 'FF_D' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:34' bound to instance 'FF_D1' of component 'FF_D' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:54]
 INFO: [Synth 8-638] synthesizing module 'FF_D' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'FF_D' (4#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:41]
 INFO: [Synth 8-3491] module 'FF_D' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:34' bound to instance 'FF_D2' of component 'FF_D' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'synchronizer' (5#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:41]
-INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:34' bound to instance 'synchronizer2' of component 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:143]
+INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:34' bound to instance 'synchronizer2' of component 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:145]
 	Parameter rst_width bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'rst_async_ass_synch_deass' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd:3' bound to instance 'rst_async_ass_synch_deass1' of component 'rst_async_ass_synch_deass' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:150]
+INFO: [Synth 8-3491] module 'rst_async_ass_synch_deass' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd:3' bound to instance 'rst_async_ass_synch_deass1' of component 'rst_async_ass_synch_deass' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:152]
 INFO: [Synth 8-638] synthesizing module 'rst_async_ass_synch_deass' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd:15]
 	Parameter rst_width bound to: 2 - type: integer 
 	Parameter rst_active_value bound to: 1'b1 
 INFO: [Synth 8-256] done synthesizing module 'rst_async_ass_synch_deass' (6#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteC/lab1_parteC.srcs/sources_1/new/PowerOnReset.vhd:15]
-INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:5' bound to instance 'divisor_frecuencia1' of component 'divisor_frecuencia' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:156]
+INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:5' bound to instance 'divisor_frecuencia1' of component 'divisor_frecuencia' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:158]
 INFO: [Synth 8-638] synthesizing module 'divisor_frecuencia' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:16]
 	Parameter cnt_width bound to: 28 - type: integer 
 INFO: [Synth 8-3491] module 'counter_28bits' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/counter_28bits.vhd:6' bound to instance 'counter1' of component 'counter_28bits' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:66]
@@ -66,9 +66,9 @@ INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Labo
 INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:34' bound to instance 'synchronizer2' of component 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:89]
 INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/synchronizer.vhd:34' bound to instance 'synchronizer3' of component 'synchronizer' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:95]
 INFO: [Synth 8-256] done synthesizing module 'divisor_frecuencia' (8#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/new/divisor_frecuencia.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'sistema_digital' (9#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'sistema_digital' (9#1) [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 776.969 ; gain = 241.180
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 776.922 ; gain = 241.504
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -81,10 +81,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 776.969 ; gain = 241.180
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 776.922 ; gain = 241.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 776.969 ; gain = 241.180
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 776.922 ; gain = 241.504
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -100,33 +100,34 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/sistema_digital_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 888.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 888.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 893.852 ; gain = 5.027
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 892.457 ; gain = 4.195
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/imports/lab1/lab1_parteE_counter/lab1_parteE_counter.srcs/sources_1/new/counter_Nbits.vhd:40]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/counter_28bits.vhd:40]
+WARNING: [Synth 8-327] inferring latch for variable 'internal_reset_LFSR_counter_reg' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/sistema_digital.vhd:114]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -230,15 +231,24 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'divisor_frecuencia1/synchronizer2/FF_D1/q_reg' into 'divisor_frecuencia1/synchronizer1/FF_D1/q_reg' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:48]
-INFO: [Synth 8-4471] merging register 'divisor_frecuencia1/synchronizer2/FF_D2/q_reg' into 'divisor_frecuencia1/synchronizer1/FF_D2/q_reg' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:48]
 INFO: [Synth 8-4471] merging register 'divisor_frecuencia1/synchronizer3/FF_D1/q_reg' into 'divisor_frecuencia1/synchronizer1/FF_D1/q_reg' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:48]
 INFO: [Synth 8-4471] merging register 'divisor_frecuencia1/synchronizer3/FF_D2/q_reg' into 'divisor_frecuencia1/synchronizer1/FF_D2/q_reg' [C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.srcs/sources_1/new/FF_D.vhd:48]
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divisor_frecuencia1/synchronizer1/FF_D1/q_reg )
 INFO: [Synth 8-3886] merging instance 'divisor_frecuencia1/synchronizer1/FF_D2/q_reg' (FDC) to 'divisor_frecuencia1/synchronizer1/FF_D1/q_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divisor_frecuencia1/synchronizer1/FF_D1/q_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p_0_out_inferred/\counter1_binario/counter_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter2_BCD/counter_inferred /\counter2_BCD/counter_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter3_LFSR/q_lfsr_4b_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p_0_out_inferred/\counter1_binario/counter_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter2_BCD/counter_inferred /\counter2_BCD/counter_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter3_LFSR/q_lfsr_4b_i_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p_0_out_inferred/\counter1_binario/counter_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter2_BCD/counter_inferred /\counter2_BCD/counter_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter3_LFSR/q_lfsr_4b_i_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p_0_out_inferred/\counter1_binario/counter_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter2_BCD/counter_inferred /\counter2_BCD/counter_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\counter3_LFSR/q_lfsr_4b_i_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,13 +260,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 893.852 ; gain = 358.063
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -268,7 +278,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 898.059 ; gain = 362.270
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 892.457 ; gain = 357.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,7 +302,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -305,7 +315,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -317,25 +327,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -348,65 +358,50 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     7|
-|3     |LUT1   |    29|
-|4     |LUT2   |    32|
-|5     |LUT3   |     3|
-|6     |LUT4   |     4|
-|7     |LUT5   |     6|
-|8     |LUT6   |     5|
-|9     |FDCE   |    45|
-|10    |FDPE   |     5|
-|11    |FDRE   |     1|
-|12    |IBUF   |     4|
-|13    |OBUF   |     4|
-+------+-------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     1|
+|3     |FDCE |     4|
+|4     |FDPE |     2|
+|5     |IBUF |     4|
+|6     |OBUF |     4|
++------+-----+------+
 
 Report Instance Areas: 
-+------+-------------------------------+------------------------------------------+------+
-|      |Instance                       |Module                                    |Cells |
-+------+-------------------------------+------------------------------------------+------+
-|1     |top                            |                                          |   146|
-|2     |  counter1_binario             |counter_Nbits                             |    12|
-|3     |  counter2_BCD                 |BCD_counter                               |     8|
-|4     |  counter3_LFSR                |LFSR_4bits                                |     5|
-|5     |  divisor_frecuencia1          |divisor_frecuencia                        |   103|
-|6     |    counter1                   |counter_28bits                            |    98|
-|7     |    rst_async_ass_synch_deass1 |rst_async_ass_synch_deass__parameterized1 |     3|
-|8     |  rst_async_ass_synch_deass1   |rst_async_ass_synch_deass                 |     2|
-|9     |  synchronizer1                |synchronizer                              |     2|
-|10    |    FF_D1                      |FF_D_2                                    |     1|
-|11    |    FF_D2                      |FF_D_3                                    |     1|
-|12    |  synchronizer2                |synchronizer_0                            |     5|
-|13    |    FF_D1                      |FF_D                                      |     1|
-|14    |    FF_D2                      |FF_D_1                                    |     4|
-+------+-------------------------------+------------------------------------------+------+
++------+-----------------------------+--------------------------+------+
+|      |Instance                     |Module                    |Cells |
++------+-----------------------------+--------------------------+------+
+|1     |top                          |                          |    16|
+|2     |  rst_async_ass_synch_deass1 |rst_async_ass_synch_deass |     2|
+|3     |  synchronizer1              |synchronizer              |     2|
+|4     |    FF_D1                    |FF_D_2                    |     1|
+|5     |    FF_D2                    |FF_D_3                    |     1|
+|6     |  synchronizer2              |synchronizer_0            |     3|
+|7     |    FF_D1                    |FF_D                      |     1|
+|8     |    FF_D2                    |FF_D_1                    |     2|
++------+-----------------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 897.637 ; gain = 362.219
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 903.848 ; gain = 251.176
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 903.848 ; gain = 368.059
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 897.637 ; gain = 246.684
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 897.637 ; gain = 362.219
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.754 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 918.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+62 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 924.754 ; gain = 630.148
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 924.754 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 918.137 ; gain = 629.465
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 918.137 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/xilinx_proyectos/Laboratorios/lab1/lab1_parteF/lab1_parteF.runs/synth_1/sistema_digital.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file sistema_digital_utilization_synth.rpt -pb sistema_digital_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 15 19:55:03 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed May 18 12:09:31 2022...

@@ -1,12 +1,15 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+------------------------------------------------------------------
+ -- Enitiy --
+------------------------------------------------------------------
 entity testbench_parteB is
-
 --  Port ( );
 end testbench_parteB;
-
+------------------------------------------------------------------
+ -- Architecture --
+------------------------------------------------------------------
 architecture Behavioral of testbench_parteB is
     --componentes a probar
     component debounce_v2 is
@@ -16,16 +19,16 @@ architecture Behavioral of testbench_parteB is
            debounce_output : out STD_LOGIC
            );
     end component;
-    --asignacion de señales    
+    --asignacion de señales para simulación  
     signal tb_reset : std_logic :='1';
     signal tb_clock : std_logic :='0';
     signal tb_debounce_input : std_logic :='0';
     signal tb_debounce_output : std_logic;
    
-    constant clk_period: time :=  15 ns; 
+    constant clk_period: time :=  15 ns; --Tclk=30nS -> Ton = Toff = 15nS - 50% duty
     
     begin
-    --instanciacion de componentes
+    --Mapeo de puertos de la UUT
     UUT_1: debounce_v2 port map (
         reset => tb_reset,
         clock => tb_clock,
@@ -37,6 +40,13 @@ architecture Behavioral of testbench_parteB is
     
     process   
     begin
+------------------------------------------------------------------
+ -- Descripción: Se simula una entrada que presenta rebotes de algunos uS.
+ -- El retardo es de aproximadamente 125mS. Por ello la simulación se debe ejecutar 
+ -- por lo menos 200mS para una mejor visualización
+------------------------------------------------------------------
+        
+        -- se simulan rebotes
         wait for 200 ns;
         tb_reset <= '0'; 
         wait for 10 us;
@@ -54,9 +64,13 @@ architecture Behavioral of testbench_parteB is
         wait for 7 us;
         tb_debounce_input <= '0';
         wait for 5 us;
+        --finalmente la entrada se pone en 1
         tb_debounce_input <= '1';
+        wait for 200 ms;
+        --se espera por 200mS
+        -- la salida debe seguir a la entrada
+        -- cumplido el tiempo de contaje (aprx. 125mS) 
         wait;       
-        
 
     end process;
 end Behavioral;

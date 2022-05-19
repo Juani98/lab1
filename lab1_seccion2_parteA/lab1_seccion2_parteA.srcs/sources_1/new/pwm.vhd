@@ -2,7 +2,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
-
+------------------------------------------------------------------
+ -- Enitiy --
+------------------------------------------------------------------
 entity pwm is
     generic(cnt_width: natural:= 8); 
 
@@ -14,10 +16,12 @@ entity pwm is
         pwm_out : out std_logic
     );
 end pwm;
-
-
-
+------------------------------------------------------------------
+ -- Architecture --
+------------------------------------------------------------------
 architecture Behavioral of pwm is
+    --Componentes
+    --Contador binario de 8bits para definir el duty cycle
     component counter_Nbits is
         Port ( 
             rst : in STD_LOGIC;
@@ -31,15 +35,14 @@ architecture Behavioral of pwm is
         );
     end component;
     --signal internal_enable : std_logic;
-    signal internal_data_out: std_logic_vector(cnt_width-1 downto 0);
-    
-   signal internal_data_in: std_logic_vector(cnt_width-1 downto 0);
-  
-  
-  signal internal_carry_out : std_logic;
-  signal internal_pwm_output : std_logic;  
-    signal internal_pre_load_data: std_logic; 
+signal internal_data_out: std_logic_vector(cnt_width-1 downto 0);
+signal internal_data_in: std_logic_vector(cnt_width-1 downto 0);
+signal internal_carry_out : std_logic;
+signal internal_pwm_output : std_logic;  
+signal internal_pre_load_data: std_logic; 
 begin
+    --Mapeo de puertos
+    --Componente N1: Contador binario de 8bits
     counter1: counter_Nbits port map(
         rst => reset,
         enable => '0', --habilitado siempre
@@ -50,39 +53,29 @@ begin
         data_out => internal_data_out,
         carry_out => internal_carry_out
     );
-
-      
---    process (duty_cycle)
---    begin
---    internal_duty_cycle <= ("11111111" - duty_cycle);
---    end process;
-
+    -- Process --
     process (clock,reset,load,internal_carry_out,duty_cycle)
-    
     begin
---        if(load='1' or internal_carry_out='1')then
---            internal_pre_load_data <= '1';
---        else
---            internal_pre_load_data <= '0';
---        end if;
         if(reset='1') then
             internal_pwm_output <= '0'; 
-    --        internal_carry_out <= '0';
-     --       internal_pre_load_data <= '0';
         elsif(rising_edge(clock)) then
-            if(load='1') then
-                internal_data_in <= duty_cycle;
-                internal_pre_load_data <= '1';
-            elsif (internal_carry_out='1') then --termino la cuenta
-                internal_pre_load_data <= '1';
-                internal_data_in <= not(internal_data_in);
-                internal_pwm_output <= not(internal_pwm_output);
+            if(load='1') then --hay un pido de carga de nuevo duty-cycle
+                internal_data_in <= duty_cycle; --le paso el dato nuevo al contador 
+                internal_pre_load_data <= '1';  --habilito la precarga del contador
                 
+            elsif (internal_carry_out='1') then --si terminó la cuenta
+                internal_pre_load_data <= '1'; -- le aviso al contador que quiero cargar un nuevo dato
+                internal_data_in <= not(internal_data_in); -- le paso el complemento del último valor cargado                          
+                internal_pwm_output <= not(internal_pwm_output); --invierto la señal de salida
+                -- Nota: el complemento del último valor cargado 
+                --       puede adoptar solo 2 posibles valores
+                --       duty_cycle o not(duty_cycle)
             else
+                -- sino, solo cuento y deshabilito la precarga
                  internal_pre_load_data <= '0';
             end if;
         end if;
     end process; 
-
+    --paso la señal correspondiente de salida a la salida
     pwm_out <= not(internal_pwm_output);
 end Behavioral;

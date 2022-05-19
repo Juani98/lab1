@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon May  2 22:15:42 2022
+| Date         : Wed May 18 11:08:02 2022
 | Host         : DESKTOP-TV2T1SG running 64-bit major release  (build 9200)
 | Command      : report_utilization -file rst_async_ass_synch_deass_utilization_synth.rpt -pb rst_async_ass_synch_deass_utilization_synth.pb
 | Design       : rst_async_ass_synch_deass
